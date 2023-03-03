@@ -1,0 +1,15 @@
+C:\C# & Angular\ReCapProject\DataAccess\bin\Debug\net6.0\DataAccess.deps.json
+C:\C# & Angular\ReCapProject\DataAccess\bin\Debug\net6.0\DataAccess.dll
+C:\C# & Angular\ReCapProject\DataAccess\bin\Debug\net6.0\DataAccess.pdb
+C:\C# & Angular\ReCapProject\DataAccess\bin\Debug\net6.0\Entities.dll
+C:\C# & Angular\ReCapProject\DataAccess\bin\Debug\net6.0\Entities.pdb
+C:\C# & Angular\ReCapProject\DataAccess\obj\Debug\net6.0\DataAccess.csproj.AssemblyReference.cache
+C:\C# & Angular\ReCapProject\DataAccess\obj\Debug\net6.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\C# & Angular\ReCapProject\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfoInputs.cache
+C:\C# & Angular\ReCapProject\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfo.cs
+C:\C# & Angular\ReCapProject\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\C# & Angular\ReCapProject\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CopyComplete
+C:\C# & Angular\ReCapProject\DataAccess\obj\Debug\net6.0\DataAccess.dll
+C:\C# & Angular\ReCapProject\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
+C:\C# & Angular\ReCapProject\DataAccess\obj\Debug\net6.0\DataAccess.pdb
+C:\C# & Angular\ReCapProject\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
