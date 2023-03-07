@@ -69,3 +69,5 @@ C:\C# & Angular\ReCapProject\UI\bin\Debug\net6.0\Business.dll
 C:\C# & Angular\ReCapProject\UI\bin\Debug\net6.0\Business.pdb
 C:\C# & Angular\ReCapProject\UI\bin\Debug\net6.0\Npgsql.dll
 C:\C# & Angular\ReCapProject\UI\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\C# & Angular\ReCapProject\UI\bin\Debug\net6.0\Core.dll
+C:\C# & Angular\ReCapProject\UI\bin\Debug\net6.0\Core.pdb

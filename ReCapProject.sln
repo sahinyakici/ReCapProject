@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Busine
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{5C4DA5CB-C498-41FE-91CA-0DD13083073E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{FA42D6B6-8B5D-4C10-B95B-DFA8915A7095}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{5C4DA5CB-C498-41FE-91CA-0DD13083073E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C4DA5CB-C498-41FE-91CA-0DD13083073E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C4DA5CB-C498-41FE-91CA-0DD13083073E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA42D6B6-8B5D-4C10-B95B-DFA8915A7095}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA42D6B6-8B5D-4C10-B95B-DFA8915A7095}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA42D6B6-8B5D-4C10-B95B-DFA8915A7095}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA42D6B6-8B5D-4C10-B95B-DFA8915A7095}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

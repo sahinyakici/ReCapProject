@@ -13,3 +13,5 @@ C:\C# & Angular\ReCapProject\DataAccess\obj\Debug\net6.0\DataAccess.dll
 C:\C# & Angular\ReCapProject\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
 C:\C# & Angular\ReCapProject\DataAccess\obj\Debug\net6.0\DataAccess.pdb
 C:\C# & Angular\ReCapProject\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
+C:\C# & Angular\ReCapProject\DataAccess\bin\Debug\net6.0\Core.dll
+C:\C# & Angular\ReCapProject\DataAccess\bin\Debug\net6.0\Core.pdb

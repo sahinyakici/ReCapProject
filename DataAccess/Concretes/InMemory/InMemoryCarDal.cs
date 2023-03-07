@@ -1,6 +1,7 @@
 ﻿using System.Linq.Expressions;
 using DataAccess.Abstract;
 using Entities.Concretes;
+using Entities.DTOs;
 
 namespace DataAccess.Concretes.InMemory;
 
@@ -62,6 +63,11 @@ public class InMemoryCarDal : ICarDal
         carToUpdate.ModelYear = car.ModelYear;
         carToUpdate.DailyPrice = car.DailyPrice;
         carToUpdate.BrandId = car.BrandId;
+    }
+
+    public List<CarDetailDto> GetCarDetails()
+    {
+        throw new NotImplementedException();
     }
 
     public void Delete(Car car)

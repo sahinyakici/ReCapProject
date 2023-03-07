@@ -1,6 +1,7 @@
 ﻿using Business.Abstract;
 using DataAccess.Abstract;
 using Entities.Concretes;
+using Entities.DTOs;
 
 namespace Business.Concretes;
 
@@ -28,6 +29,21 @@ public class CarManager : ICarService
         return _carDal.GetAll();
     }
 
+    public void Update(Car car)
+    {
+        _carDal.Update(car);
+    }
+
+    public void Delete(Car car)
+    {
+        _carDal.Delete(car);
+    }
+
+    public List<CarDetailDto> GetCarDetails()
+    {
+        return _carDal.GetCarDetails();
+    }
+
     public void Add(Car car)
     {
         if (car.DailyPrice > 0 && car.CarName.Length > 2)
@@ -36,7 +52,8 @@ public class CarManager : ICarService
         }
         else
         {
-            throw new ArgumentException("Daily price should bigger than 0 and car name length should min 3 charecters");
+            Console.WriteLine
+                ("Daily price should bigger than 0 and car name length should min 3 charecters");
         }
     }
 }
