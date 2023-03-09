@@ -2,10 +2,13 @@
 using DataAccess.Concretes.EntityFramework;
 using Entities.Concretes;
 
-//AllCarMethodsTest();
-//AllBrandMethodsTest();
-//AllColorMethodsTest();
-InsertItems();
+Console.WriteLine("******I starting write all car methods******");
+AllCarMethodsTest();
+Console.WriteLine("******I starting write all brand methods******");
+AllBrandMethodsTest();
+Console.WriteLine("******I starting write all color methods******");
+AllColorMethodsTest();
+//InsertItems();
 WriteCars();
 
 void AllCarMethodsTest()
@@ -33,7 +36,7 @@ void AllCarMethodsTest()
         };
         List<Car> cars = new List<Car>();
         carManager.Add(myCar);
-        cars = carManager.GetAll();
+        cars = carManager.GetAll().Data;
         Console.WriteLine("--- I added a car ---");
         WriteAllElements(cars);
         /*carManager.Add(newCar);
@@ -44,12 +47,13 @@ void AllCarMethodsTest()
         cars = carManager.GetAll();
         Console.WriteLine("--- I deleted a car ---");
         WriteAllElements(cars);*/
-        carManager.Add(wrongCar);
+        string wrongTest = carManager.Add(wrongCar).Message;
         Console.WriteLine("--- I tried add a wrong car ---");
-        cars = carManager.GetCarsByBrandId(5);
+        Console.WriteLine(wrongTest);
+        cars = carManager.GetCarsByBrandId(5).Data;
         Console.WriteLine("--- I filtered cars by brand id ---");
         WriteAllElements(cars);
-        cars = carManager.GetCarsByColorId(4);
+        cars = carManager.GetCarsByColorId(4).Data;
         Console.WriteLine("--- I filtered cars by color id ---");
         WriteAllElements(cars);
     }
@@ -69,22 +73,22 @@ void AllBrandMethodsTest()
     brandManager.Insert(new Brand { Id = 1, Name = "Mercedes" });
     brandManager.Insert(new Brand { Id = 2, Name = "BMW" });
     Brand newBrand = new Brand { Id = 1, Name = "Peugeot" };
-    List<Brand> brands = brandManager.GetAllBrands();
+    List<Brand> brands = brandManager.GetAllBrands().Data;
     Console.WriteLine("---ALL ELEMENTS ADDED---");
     WriteAllElements(brands);
 
     brandManager.Update(newBrand);
-    brands = brandManager.GetAllBrands();
+    brands = brandManager.GetAllBrands().Data;
     Console.WriteLine("---Updated 1 element---");
     WriteAllElements(brands);
 
     Console.WriteLine("---I test id---");
-    List<Brand> test = brandManager.GetBrandById(2);
+    List<Brand> test = brandManager.GetBrandById(2).Data;
     WriteAllElements(test);
 
     brandManager.Delete(newBrand);
     Console.WriteLine("---I deleted 1 element---");
-    brands = brandManager.GetAllBrands();
+    brands = brandManager.GetAllBrands().Data;
     WriteAllElements(brands);
 }
 
@@ -102,22 +106,22 @@ void AllColorMethodsTest()
     colorManager.Insert(new Color { Id = 1, Name = "Siyah" });
     colorManager.Insert(new Color { Id = 2, Name = "Beyaz" });
     Color newColor = new Color { Id = 1, Name = "Mavi" };
-    List<Color> colors = colorManager.GetAllColors();
+    List<Color> colors = colorManager.GetAllColors().Data;
     Console.WriteLine("---ALL COLORS ADDED---");
     WriteAllElements(colors);
 
     colorManager.Update(newColor);
-    colors = colorManager.GetAllColors();
+    colors = colorManager.GetAllColors().Data;
     Console.WriteLine("---Updated 1 color---");
     WriteAllElements(colors);
 
     Console.WriteLine("---I test id---");
-    List<Color> test = colorManager.GetColorById(2);
+    List<Color> test = colorManager.GetColorById(2).Data;
     WriteAllElements(test);
 
     colorManager.Delete(newColor);
     Console.WriteLine("---I deleted 1 element---");
-    colors = colorManager.GetAllColors();
+    colors = colorManager.GetAllColors().Data;
     WriteAllElements(colors);
 }
 
@@ -137,7 +141,7 @@ void InsertItems()
 void WriteCars()
 {
     CarManager carManager = new CarManager(new EfCarDal());
-    foreach (var carDetail in carManager.GetCarDetails())
+    foreach (var carDetail in carManager.GetCarDetails().Data)
     {
         Console.WriteLine("{0} --- {1} --- {2} --- {3}", carDetail.CarName, carDetail.BrandName, carDetail.ColorName,
             carDetail.DailyPrice);
