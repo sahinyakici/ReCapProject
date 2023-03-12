@@ -32,6 +32,11 @@ public class CarManager : ICarService
         return new SuccessDataResult<List<Car>>(_carDal.GetAll());
     }
 
+    public IDataResult<List<Car>> GetCarById(int id)
+    {
+        return new SuccessDataResult<List<Car>>(_carDal.GetAll(c => c.Id == id));
+    }
+
     public IResult Update(Car car)
     {
         _carDal.Update(car);
@@ -56,6 +61,7 @@ public class CarManager : ICarService
             _carDal.Add(car);
             return new SuccessResult(Messages.CarAdded);
         }
+
         return new ErrorResult(Messages.CarNotAdded);
     }
 }
