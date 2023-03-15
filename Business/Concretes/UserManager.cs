@@ -1,5 +1,7 @@
 ﻿using Business.Abstract;
 using Business.Constants;
+using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Validation;
 using Core.Utilities.Results.Abstract;
 using Core.Utilities.Results.Concretes;
 using DataAccess.Abstract;
@@ -26,6 +28,7 @@ public class UserManager : IUsersService
         return new SuccessDataResult<List<Users>>(_usersDal.GetAll(u => userId == u.Id));
     }
 
+    [ValidationAspect(typeof(UserValidator))]
     public IResult Add(Users user)
     {
         _usersDal.Add(user);
@@ -38,6 +41,7 @@ public class UserManager : IUsersService
         return new SuccessResult(Messages.UserDeleted);
     }
 
+    [ValidationAspect(typeof(UserValidator))]
     public IResult Update(Users user)
     {
         _usersDal.Update(user);

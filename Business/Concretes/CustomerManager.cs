@@ -1,5 +1,7 @@
 ﻿using Business.Abstract;
 using Business.Constants;
+using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Validation;
 using Core.Utilities.Results.Abstract;
 using Core.Utilities.Results.Concretes;
 using DataAccess.Abstract;
@@ -26,6 +28,7 @@ public class CustomerManager : ICustomersService
         return new SuccessDataResult<List<Customers>>(_customerDal.GetAll(c => c.UserId == customerId));
     }
 
+    [ValidationAspect(typeof(CustomerValidator))]
     public IResult Add(Customers customer)
     {
         _customerDal.Add(customer);
@@ -38,6 +41,7 @@ public class CustomerManager : ICustomersService
         return new SuccessResult(Messages.CustomerDeleted);
     }
 
+    [ValidationAspect(typeof(CustomerValidator))]
     public IResult Update(Customers customer)
     {
         _customerDal.Update(customer);

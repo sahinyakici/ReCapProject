@@ -284,3 +284,4 @@ C:\C# & Angular\ReCapProject\WebAPI\bin\Debug\net7.0\Autofac.dll
 C:\C# & Angular\ReCapProject\WebAPI\bin\Debug\net7.0\Autofac.Extensions.DependencyInjection.dll
 C:\C# & Angular\ReCapProject\WebAPI\bin\Debug\net7.0\Autofac.Extras.DynamicProxy.dll
 C:\C# & Angular\ReCapProject\WebAPI\bin\Debug\net7.0\Castle.Core.dll
+C:\C# & Angular\ReCapProject\WebAPI\bin\Debug\net7.0\FluentValidation.dll

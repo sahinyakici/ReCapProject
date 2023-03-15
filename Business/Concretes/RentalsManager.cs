@@ -1,5 +1,7 @@
 ﻿using Business.Abstract;
 using Business.Constants;
+using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Validation;
 using Core.Utilities.Results.Abstract;
 using Core.Utilities.Results.Concretes;
 using DataAccess.Abstract;
@@ -26,6 +28,7 @@ public class RentalsManager : IRentalsService
         return new SuccessDataResult<List<Rentals>>(_rentalsDal.GetAll(r => rentalId == r.Id));
     }
 
+    [ValidationAspect(typeof(RentalValidator))]
     public IResult Add(Rentals rental)
     {
         if (rental.ReturnDate == null)
@@ -40,6 +43,7 @@ public class RentalsManager : IRentalsService
         return new SuccessResult(Messages.RentalDeleted);
     }
 
+    [ValidationAspect(typeof(RentalValidator))]
     public IResult Update(Rentals rental)
     {
         _rentalsDal.Update(rental);
