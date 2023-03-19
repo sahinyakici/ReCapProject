@@ -23,4 +23,8 @@ public static class Messages
     public static string RentalDeleted = "Rental is deleted!";
     public static string RentalUpdated = "Rental is updated!";
     public static string RentalFailed = "This car can't rental!";
+    public static string ImageAdded = "Car image is added!";
+    public static string ImageUpdated = "Car image is updated!";
+    public static string ImageDeleted = "Car image is deleted!";
+    public static string CarHaveMaxImagesError = "Car is already have 5 image!";
 }

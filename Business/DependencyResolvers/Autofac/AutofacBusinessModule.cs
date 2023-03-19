@@ -4,6 +4,7 @@ using Autofac.Extras.DynamicProxy;
 using Business.Abstract;
 using Business.Concretes;
 using Castle.DynamicProxy;
+using Core.Utilities.Helpers.File;
 using Core.Utilities.Interceptors;
 using DataAccess.Abstract;
 using DataAccess.Concretes.EntityFramework;
@@ -27,6 +28,9 @@ public class AutofacBusinessModule : Module
         builder.RegisterType<EfUsersDal>().As<IUsersDal>().SingleInstance();
         builder.RegisterType<RentalsManager>().As<IRentalsService>().SingleInstance();
         builder.RegisterType<EfRentalsDal>().As<IRentalsDal>().SingleInstance();
+        builder.RegisterType<CarImageManager>().As<ICarImageService>().SingleInstance();
+        builder.RegisterType<EfCarImagesDal>().As<ICarImagesDal>().SingleInstance();
+        builder.RegisterType<FileManager>().As<IFileService>().SingleInstance();
 
         var assembly = Assembly.GetExecutingAssembly();
 

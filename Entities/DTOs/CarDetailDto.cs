@@ -1,4 +1,6 @@
-﻿namespace Entities.DTOs;
+﻿using Entities.Concretes;
+
+namespace Entities.DTOs;
 
 public class CarDetailDto
 {
@@ -6,4 +8,5 @@ public class CarDetailDto
     public string BrandName { get; set; }
     public string ColorName { get; set; }
     public decimal DailyPrice { get; set; }
+    public List<string> CarImage { get; set; }
 }
