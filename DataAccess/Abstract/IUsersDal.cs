@@ -1,8 +1,9 @@
-﻿using Entities.Concretes;
+﻿using Entities.Abstract.Concrete;
+using Entities.Concretes;
 
 namespace DataAccess.Abstract;
 
-public interface IUsersDal:IEntityRepository<Users>
+public interface IUserDal : IEntityRepository<User>
 {
-    
+    List<OperationClaim> GetClaims(User user);
 }

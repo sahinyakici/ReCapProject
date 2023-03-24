@@ -9,6 +9,6 @@ public interface ICarImageService
     IDataResult<List<CarImage>> GetCarImageById(string imagePath);
     IDataResult<List<CarImage>> GetCarImageByCarId(int carId);
     IResult AddCarImage(CarImage carImage, string path);
-    IResult UpdateCarImage(int carImageId,string path);
+    IResult UpdateCarImage(int carImageId, string path);
     IResult DeleteCarImage(CarImage carImage);
 }

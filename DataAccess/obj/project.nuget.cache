@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ys7p6nTnDJURfECVpQXl0OhgsjrbXXL04UuEH6+7WJvy+D7v3zTCprX8gcyKo/MKM4eYbZ6MKXzUpeJw+U8bfg==",
+  "dgSpecHash": "PTHGWrWTBIiriAY8OCMOSwqmrl5NNW1hwBRGgMN72Rh5a2ETXTTePxknpTjBYdqcQcgKEoTJO83cVNCE6ZQqwQ==",
   "success": true,
   "projectFilePath": "C:\\C# & Angular\\ReCapProject\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [
@@ -23,6 +23,7 @@
     "C:\\Users\\shnyk\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\shnyk\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
     "C:\\Users\\shnyk\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\shnyk\\.nuget\\packages\\microsoft.extensions.configuration.binder\\7.0.4\\microsoft.extensions.configuration.binder.7.0.4.nupkg.sha512",
     "C:\\Users\\shnyk\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\shnyk\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\shnyk\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",

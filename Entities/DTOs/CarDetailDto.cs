@@ -1,6 +1,4 @@
-﻿using Entities.Concretes;
-
-namespace Entities.DTOs;
+﻿namespace Entities.DTOs;
 
 public class CarDetailDto
 {

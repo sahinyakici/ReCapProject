@@ -11,7 +11,7 @@ namespace Business.Concretes;
 
 public class CustomerManager : ICustomersService
 {
-    private ICustomersDal _customerDal;
+    private readonly ICustomersDal _customerDal;
 
     public CustomerManager(ICustomersDal customerDal)
     {

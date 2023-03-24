@@ -76,3 +76,6 @@ C:\C# & Angular\ReCapProject\UI\bin\Debug\net6.0\Autofac.Extensions.DependencyIn
 C:\C# & Angular\ReCapProject\UI\bin\Debug\net6.0\Autofac.Extras.DynamicProxy.dll
 C:\C# & Angular\ReCapProject\UI\bin\Debug\net6.0\Castle.Core.dll
 C:\C# & Angular\ReCapProject\UI\bin\Debug\net6.0\FluentValidation.dll
+C:\C# & Angular\ReCapProject\UI\bin\Debug\net6.0\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\C# & Angular\ReCapProject\UI\bin\Debug\net6.0\Microsoft.AspNetCore.Http.Features.dll
+C:\C# & Angular\ReCapProject\UI\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Binder.dll

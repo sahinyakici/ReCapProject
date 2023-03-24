@@ -285,3 +285,5 @@ C:\C# & Angular\ReCapProject\WebAPI\bin\Debug\net7.0\Autofac.Extensions.Dependen
 C:\C# & Angular\ReCapProject\WebAPI\bin\Debug\net7.0\Autofac.Extras.DynamicProxy.dll
 C:\C# & Angular\ReCapProject\WebAPI\bin\Debug\net7.0\Castle.Core.dll
 C:\C# & Angular\ReCapProject\WebAPI\bin\Debug\net7.0\FluentValidation.dll
+C:\C# & Angular\ReCapProject\WebAPI\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\C# & Angular\ReCapProject\WebAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

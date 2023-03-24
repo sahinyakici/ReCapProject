@@ -1,4 +1,5 @@
 using Business.Abstract;
+using Entities.Abstract.Concrete;
 using Entities.Concretes;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,17 +7,17 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UsersController : ControllerBase
+    public class UserController : ControllerBase
     {
-        private IUsersService _usersService;
+        private IUserService _usersService;
 
-        public UsersController(IUsersService usersService)
+        public UserController(IUserService usersService)
         {
             _usersService = usersService;
         }
 
         [HttpGet("getall")]
-        public IActionResult GetAllUsers()
+        public IActionResult GetAllUser()
         {
             var result = _usersService.GetAll();
             return result.Success ? Ok(result.Data) : BadRequest(result.Message);
@@ -30,21 +31,21 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("add")]
-        public IActionResult AddUser(Users user)
+        public IActionResult AddUser(User user)
         {
             var result = _usersService.Add(user);
             return result.Success ? Ok(result.Success) : BadRequest(result.Message);
         }
 
         [HttpPatch("update")]
-        public IActionResult UpdateUser(Users user)
+        public IActionResult UpdateUser(User user)
         {
             var result = _usersService.Update(user);
             return result.Success ? Ok(result.Success) : BadRequest(result.Message);
         }
 
         [HttpDelete("delete")]
-        public IActionResult DeleteUser(Users user)
+        public IActionResult DeleteUser(User user)
         {
             var result = _usersService.Delete(user);
             return result.Success ? Ok(result.Success) : BadRequest(result.Message);

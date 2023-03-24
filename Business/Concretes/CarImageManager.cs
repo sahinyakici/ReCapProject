@@ -11,8 +11,8 @@ namespace Business.Concretes;
 
 public class CarImageManager : ICarImageService
 {
-    private ICarImagesDal _carImagesDal;
-    private IFileService _fileManager;
+    private readonly ICarImagesDal _carImagesDal;
+    private readonly IFileService _fileManager;
 
     public CarImageManager(ICarImagesDal carImagesDal, IFileService fileManager)
     {
@@ -37,11 +37,8 @@ public class CarImageManager : ICarImageService
 
     public IResult AddCarImage(CarImage carImage, string path)
     {
-        IResult result = BusinessRules.Run(CheckCarShouldHaveMaxFiveImages(carImage.CarId));
-        if (result != null)
-        {
-            return result;
-        }
+        var result = BusinessRules.Run(CheckCarShouldHaveMaxFiveImages(carImage.CarId));
+        if (result != null) return result;
         carImage.ImagePath = _fileManager.UploadWithGuid(path, Paths.Images).Message;
         carImage.Date = DateTime.Now;
         _carImagesDal.Add(carImage);
@@ -50,8 +47,8 @@ public class CarImageManager : ICarImageService
 
     public IResult UpdateCarImage(int carImageId, string path)
     {
-        CarImage carImage = _carImagesDal.Get(c => c.Id == carImageId);
-        string fileName = carImage.ImagePath;
+        var carImage = _carImagesDal.Get(c => c.Id == carImageId);
+        var fileName = carImage.ImagePath;
         _fileManager.Delete(Paths.Images + fileName);
         _fileManager.Upload(path, Paths.Images, fileName);
         return new SuccessResult(Messages.ImageUpdated);

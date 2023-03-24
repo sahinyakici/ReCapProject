@@ -1,15 +1,11 @@
-﻿using Business.Concretes;
-using DataAccess.Concretes.EntityFramework;
-using Entities.Concretes;
-
-/*Console.WriteLine("******I starting write all car methods******");
-AllCarMethodsTest();
+﻿Console.WriteLine("******I starting write all car methods******");
+/*AllCarMethodsTest();
 Console.WriteLine("******I starting write all brand methods******");
 AllBrandMethodsTest();
 Console.WriteLine("******I starting write all color methods******");
 AllColorMethodsTest();
 //InsertItems();
-WriteCars();*/
+WriteCars();
 Users user = new Users { Email = "test2@hotmail.com", Password = "1235asd", FirstName = "test2", LastName = "testUser2" };
 UserManager userManager = new UserManager(new EfUsersDal());
 string message = userManager.Add(user).Message;
@@ -50,7 +46,7 @@ void AllCarMethodsTest()
         carManager.Delete(newCar);
         cars = carManager.GetAll();
         Console.WriteLine("--- I deleted a car ---");
-        WriteAllElements(cars);*/
+        WriteAllElements(cars);
         string wrongTest = carManager.Add(wrongCar).Message;
         Console.WriteLine("--- I tried add a wrong car ---");
         Console.WriteLine(wrongTest);
@@ -150,4 +146,4 @@ void WriteCars()
         Console.WriteLine("{0} --- {1} --- {2} --- {3}", carDetail.CarName, carDetail.BrandName, carDetail.ColorName,
             carDetail.DailyPrice);
     }
-}
+}*/

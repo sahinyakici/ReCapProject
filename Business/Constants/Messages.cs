@@ -27,4 +27,11 @@ public static class Messages
     public static string ImageUpdated = "Car image is updated!";
     public static string ImageDeleted = "Car image is deleted!";
     public static string CarHaveMaxImagesError = "Car is already have 5 image!";
+    public static string AuthorizationDenied = "Yetkiniz yok";
+    public static string UserRegistered = "Kayıt oldu";
+    public static string UserNotFound = "Kullanıcı yok";
+    public static string PasswordError = "Şifre hatalı";
+    public static string SuccessfulLogin = "Başarıyla giriş yapıldı";
+    public static string UserAlreadyExists = "Kullanıcı zaten var";
+    public static string AccessTokenCreated = "Token oluşturuldu";
 }
