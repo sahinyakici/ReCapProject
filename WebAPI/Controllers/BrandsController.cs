@@ -19,14 +19,14 @@ namespace WebAPI.Controllers
         public IActionResult GetAllBrand()
         {
             var result = _brandService.GetAllBrands();
-            return result.Success ? Ok(result.Data) : BadRequest(result.Message);
+            return result.Success ? Ok(result) : BadRequest(result.Message);
         }
 
         [HttpGet("getbyid")]
         public IActionResult GetBrandById(int id)
         {
             var result = _brandService.GetBrandById(id);
-            return result.Success ? Ok(result.Data) : BadRequest(result.Message);
+            return result.Success ? Ok(result) : BadRequest(result.Message);
         }
 
         [HttpPost("add")]

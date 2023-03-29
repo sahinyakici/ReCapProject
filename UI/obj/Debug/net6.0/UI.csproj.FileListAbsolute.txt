@@ -79,3 +79,7 @@ C:\C# & Angular\ReCapProject\UI\bin\Debug\net6.0\FluentValidation.dll
 C:\C# & Angular\ReCapProject\UI\bin\Debug\net6.0\Microsoft.AspNetCore.Http.Abstractions.dll
 C:\C# & Angular\ReCapProject\UI\bin\Debug\net6.0\Microsoft.AspNetCore.Http.Features.dll
 C:\C# & Angular\ReCapProject\UI\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\C# & Angular\ReCapProject\UI\bin\Debug\net6.0\Microsoft.AspNetCore.Http.dll
+C:\C# & Angular\ReCapProject\UI\bin\Debug\net6.0\Microsoft.AspNetCore.WebUtilities.dll
+C:\C# & Angular\ReCapProject\UI\bin\Debug\net6.0\Microsoft.Extensions.ObjectPool.dll
+C:\C# & Angular\ReCapProject\UI\bin\Debug\net6.0\Microsoft.Net.Http.Headers.dll

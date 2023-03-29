@@ -6,8 +6,11 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Core.CrossCuttingConcerns.Caching.Microsoft;
 
-public class MemoryCacheManager: ICacheService
+public class MemoryCacheManager : ICacheService
 {
+    private static readonly FieldInfo? cacheEntriesStateDefinition = typeof(MemoryCache).GetField("_entries", BindingFlags.NonPublic | BindingFlags.Instance);
+    private static readonly PropertyInfo? cacheEntriesCollectionDefinition = cacheEntriesStateDefinition?.FieldType.GetProperty("InternalDictionary", BindingFlags.NonPublic | BindingFlags.Instance);
+
     private IMemoryCache _memoryCache;
 
     public MemoryCacheManager()
@@ -42,8 +45,6 @@ public class MemoryCacheManager: ICacheService
 
     public void RemoveByPattern(string pattern)
     {
-        var cacheEntriesCollectionDefinition = typeof(MemoryCache).GetProperty("EntriesCollection",
-            BindingFlags.NonPublic | BindingFlags.Instance);
         var cacheEntriesCollection = cacheEntriesCollectionDefinition.GetValue(_memoryCache) as dynamic;
         List<ICacheEntry> cacheCollectionValues = new List<ICacheEntry>();
 

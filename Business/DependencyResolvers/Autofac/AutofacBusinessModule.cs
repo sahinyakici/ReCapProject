@@ -4,6 +4,8 @@ using Autofac.Extras.DynamicProxy;
 using Business.Abstract;
 using Business.Concretes;
 using Castle.DynamicProxy;
+using Core.CrossCuttingConcerns.Caching;
+using Core.CrossCuttingConcerns.Caching.Microsoft;
 using Core.Utilities.Helpers.File;
 using Core.Utilities.Interceptors;
 using Core.Utilities.Security.JWT;

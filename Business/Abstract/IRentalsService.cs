@@ -1,5 +1,6 @@
 ﻿using Core.Utilities.Results.Abstract;
 using Entities.Concretes;
+using Entities.DTOs;
 
 namespace Business.Abstract;
 
@@ -10,4 +11,5 @@ public interface IRentalsService
     IResult Add(Rentals rental);
     IResult Delete(Rentals rental);
     IResult Update(Rentals rental);
+    IDataResult<List<CarRentalDto>> GetCarRentalDetails();
 }

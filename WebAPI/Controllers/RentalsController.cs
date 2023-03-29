@@ -1,11 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Business.Abstract;
 using Entities.Concretes;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers
@@ -25,14 +19,14 @@ namespace WebAPI.Controllers
         public IActionResult GetAllRentals()
         {
             var result = _rentalsService.GetAll();
-            return result.Success ? Ok(result.Data) : BadRequest(result.Message);
+            return result.Success ? Ok(result) : BadRequest(result.Message);
         }
 
         [HttpGet("getbyid")]
         public IActionResult GetRentalById(int id)
         {
             var result = _rentalsService.GetByRentalId(id);
-            return result.Success ? Ok(result.Data) : BadRequest(result.Message);
+            return result.Success ? Ok(result) : BadRequest(result.Message);
         }
 
         [HttpPost("add")]
@@ -54,6 +48,13 @@ namespace WebAPI.Controllers
         {
             var result = _rentalsService.Delete(rental);
             return result.Success ? Ok(result.Success) : BadRequest(result.Message);
+        }
+
+        [HttpGet("getdetails")]
+        public IActionResult GetRentalDetails()
+        {
+            var result = _rentalsService.GetCarRentalDetails();
+            return result.Success ? Ok(result) : BadRequest(result.Message);
         }
     }
 }

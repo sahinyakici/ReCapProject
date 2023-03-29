@@ -6,6 +6,7 @@ using Core.Utilities.Results.Abstract;
 using Core.Utilities.Results.Concretes;
 using DataAccess.Abstract;
 using Entities.Concretes;
+using Entities.DTOs;
 
 namespace Business.Concretes;
 
@@ -48,5 +49,10 @@ public class RentalsManager : IRentalsService
     {
         _rentalsDal.Update(rental);
         return new SuccessResult(Messages.RentalUpdated);
+    }
+
+    public IDataResult<List<CarRentalDto>> GetCarRentalDetails()
+    {
+        return new SuccessDataResult<List<CarRentalDto>>(_rentalsDal.GetCarRentalDetails());
     }
 }

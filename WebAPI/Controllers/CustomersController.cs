@@ -19,14 +19,14 @@ namespace WebAPI.Controllers
         public IActionResult GetAllCustomers()
         {
             var result = _customersService.GetAll();
-            return result.Success ? Ok(result.Data) : BadRequest(result.Message);
+            return result.Success ? Ok(result) : BadRequest(result.Message);
         }
 
         [HttpGet("getbyid")]
         public IActionResult GetByCustomerId(int id)
         {
             var result = _customersService.GetByCustomerId(id);
-            return result.Success ? Ok(result.Data) : BadRequest(result.Message);
+            return result.Success ? Ok(result) : BadRequest(result.Message);
         }
 
         [HttpPost("add")]

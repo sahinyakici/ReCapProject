@@ -363,7 +363,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net7.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -371,8 +371,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {
               "C:\\C# & Angular\\ReCapProject\\Business\\Business.csproj": {
                 "projectPath": "C:\\C# & Angular\\ReCapProject\\Business\\Business.csproj"
@@ -387,8 +387,8 @@
         }
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Autofac.Extensions.DependencyInjection": {
               "target": "Package",
@@ -396,15 +396,11 @@
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[7.0.4, )"
-            },
-            "Microsoft.AspNetCore.OpenApi": {
-              "target": "Package",
-              "version": "[7.0.3, )"
+              "version": "[6.0.15, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[7.0.4, )"
+              "version": "[6.0.13, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

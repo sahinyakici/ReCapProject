@@ -19,28 +19,28 @@ namespace WebAPI.Controllers
         public IActionResult GetAllCars()
         {
             var result = _carService.GetAll();
-            return result.Success ? Ok(result.Data) : BadRequest(result.Message);
+            return result.Success ? Ok(result) : BadRequest(result.Message);
         }
 
         [HttpGet("getbyid")]
         public IActionResult GetCarById(int id)
         {
             var result = _carService.GetCarById(id);
-            return result.Success ? Ok(result.Data) : BadRequest(result.Message);
+            return result.Success ? Ok(result) : BadRequest(result.Message);
         }
 
         [HttpGet("getbybrandid")]
         public IActionResult GetCarByBrandId(int id)
         {
             var result = _carService.GetCarsByBrandId(id);
-            return result.Success ? Ok(result.Data) : BadRequest(result.Message);
+            return result.Success ? Ok(result) : BadRequest(result.Message);
         }
 
         [HttpGet("getbycolorid")]
         public IActionResult GetCarByColorId(int id)
         {
             var result = _carService.GetCarsByColorId(id);
-            return result.Success ? Ok(result.Data) : BadRequest(result.Message);
+            return result.Success ? Ok(result) : BadRequest(result.Message);
         }
 
         [HttpPatch("update")]
@@ -61,7 +61,7 @@ namespace WebAPI.Controllers
         public IActionResult GetCarDetails()
         {
             var result = _carService.GetCarDetails();
-            return result.Success ? Ok(result.Data) : BadRequest(result.Message);
+            return result.Success ? Ok(result) : BadRequest(result.Message);
         }
 
         [HttpPost("add")]

@@ -20,14 +20,14 @@ namespace WebAPI.Controllers
         public IActionResult GetAllUser()
         {
             var result = _usersService.GetAll();
-            return result.Success ? Ok(result.Data) : BadRequest(result.Message);
+            return result.Success ? Ok(result) : BadRequest(result.Message);
         }
 
         [HttpGet("getbyid")]
         public IActionResult GetUserById(int id)
         {
             var result = _usersService.GetUserById(id);
-            return result.Success ? Ok(result.Data) : BadRequest(result.Message);
+            return result.Success ? Ok(result) : BadRequest(result.Message);
         }
 
         [HttpPost("add")]

@@ -1,5 +1,4 @@
-﻿using System.Linq.Expressions;
-using Entities.Concretes;
+﻿using Entities.Concretes;
 using Entities.DTOs;
 
 namespace DataAccess.Abstract;

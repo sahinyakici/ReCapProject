@@ -19,14 +19,14 @@ namespace WebAPI.Controllers
         public IActionResult GetAllColors()
         {
             var result = _colorService.GetAllColors();
-            return result.Success ? Ok(result.Data) : BadRequest(result.Message);
+            return result.Success ? Ok(result) : BadRequest(result.Message);
         }
 
         [HttpGet("getbyid")]
         public IActionResult GetColorById(int id)
         {
             var result = _colorService.GetColorById(id);
-            return result.Success ? Ok(result.Data) : BadRequest(result.Message);
+            return result.Success ? Ok(result) : BadRequest(result.Message);
         }
 
         [HttpPost("add")]

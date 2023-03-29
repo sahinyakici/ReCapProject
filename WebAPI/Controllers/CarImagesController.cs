@@ -26,21 +26,21 @@ namespace WebAPI.Controllers
         public IActionResult GetAllImages()
         {
             var result = _carImageService.GetAllCarImage();
-            return result.Success ? Ok(result.Data) : BadRequest(result.Message);
+            return result.Success ? Ok(result) : BadRequest(result.Message);
         }
 
         [HttpGet("getbycarid")]
         public IActionResult GetImagesByCarId(int id)
         {
             var result = _carImageService.GetCarImageByCarId(id);
-            return result.Success ? Ok(result.Data) : BadRequest(result.Message);
+            return result.Success ? Ok(result) : BadRequest(result.Message);
         }
 
         [HttpGet("getbyimageid")]
         public IActionResult GetImageByID(string id)
         {
             var result = _carImageService.GetCarImageById(id);
-            return result.Success ? Ok(result.Data) : BadRequest(result.Message);
+            return result.Success ? Ok(result) : BadRequest(result.Message);
         }
 
         [HttpPatch("update")]
