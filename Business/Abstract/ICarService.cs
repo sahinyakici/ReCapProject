@@ -14,4 +14,6 @@ public interface ICarService
     IResult Delete(Car car);
     IResult Add(Car car);
     IDataResult<List<CarDetailDto>> GetCarDetails();
+    IDataResult<List<CarDetailDto>> GetCarDetailsByBrandId(int brandId);
+    IDataResult<List<CarDetailDto>> GetCarDetailsByColorId(int colorId);
 }
