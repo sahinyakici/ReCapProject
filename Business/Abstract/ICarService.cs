@@ -16,4 +16,5 @@ public interface ICarService
     IDataResult<List<CarDetailDto>> GetCarDetails();
     IDataResult<List<CarDetailDto>> GetCarDetailsByBrandId(int brandId);
     IDataResult<List<CarDetailDto>> GetCarDetailsByColorId(int colorId);
+    IDataResult<List<CarDetailDto>> GetCarDetailById(int carId);
 }

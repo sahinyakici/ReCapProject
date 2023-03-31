@@ -35,10 +35,12 @@ public class CarImageManager : ICarImageService
         return new SuccessDataResult<List<CarImage>>(_carImagesDal.GetAll(i => i.CarId == carId));
     }
 
-    public IResult AddCarImage(CarImage carImage, string path)
+    public IResult AddCarImage(int carId, string path)
     {
-        var result = BusinessRules.Run(CheckCarShouldHaveMaxFiveImages(carImage.CarId));
+        var result = BusinessRules.Run(CheckCarShouldHaveMaxFiveImages(carId));
         if (result != null) return result;
+        CarImage carImage = new CarImage();
+        carImage.CarId = carId;
         carImage.ImagePath = _fileManager.UploadWithGuid(path, Paths.Images).Message;
         carImage.Date = DateTime.Now;
         _carImagesDal.Add(carImage);

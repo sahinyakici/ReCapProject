@@ -16,9 +16,9 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("add")]
-        public IActionResult AddImages(string path, CarImage carImage)
+        public IActionResult AddImages(int carId, string path)
         {
-            var result = _carImageService.AddCarImage(carImage, path);
+            var result = _carImageService.AddCarImage(carId, path);
             return result.Success ? Ok(result) : BadRequest(result.Message);
         }
 

@@ -67,6 +67,11 @@ public class CarManager : ICarService
         return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetDetailsByColorId(colorId));
     }
 
+    public IDataResult<List<CarDetailDto>> GetCarDetailById(int carId)
+    {
+        return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetailsById(carId));
+    }
+
     [ValidationAspect(typeof(CarValidator))]
     public IResult Add(Car car)
     {

@@ -42,6 +42,13 @@ namespace WebAPI.Controllers
             var result = _carService.GetCarsByColorId(id);
             return result.Success ? Ok(result) : BadRequest(result.Message);
         }
+        
+        [HttpGet("getdetailbyid")]
+        public IActionResult GetDetailById(int carId)
+        {
+            var result = _carService.GetCarDetailById(carId);
+            return result.Success ? Ok(result) : BadRequest(result.Message);
+        }
 
         [HttpPatch("update")]
         public IActionResult UpdateCar(Car car)

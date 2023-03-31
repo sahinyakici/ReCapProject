@@ -80,6 +80,11 @@ public class InMemoryCarDal : ICarDal
         throw new NotImplementedException();
     }
 
+    public List<CarDetailDto> GetCarDetailsById(int colorId)
+    {
+        throw new NotImplementedException();
+    }
+
     public void Delete(Car car)
     {
         Car carToDelete = _cars.SingleOrDefault(c => car.Id == c.Id);
