@@ -12,4 +12,5 @@ public interface IRentalsService
     IResult Delete(Rentals rental);
     IResult Update(Rentals rental);
     IDataResult<List<CarRentalDto>> GetCarRentalDetails();
+    IDataResult<List<CarRentalDto>> GetCarRentalDetailsWithCarId(int carId);
 }

@@ -55,4 +55,9 @@ public class RentalsManager : IRentalsService
     {
         return new SuccessDataResult<List<CarRentalDto>>(_rentalsDal.GetCarRentalDetails());
     }
+
+    public IDataResult<List<CarRentalDto>> GetCarRentalDetailsWithCarId(int carId)
+    {
+        return new SuccessDataResult<List<CarRentalDto>>(_rentalsDal.GetCarRentalDetailsWithCarId(carId));
+    }
 }
